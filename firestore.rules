@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // The Next.js server uses Firebase Admin after checking teacher authorization.
+    // Students read the public library through GET /api/lessons.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

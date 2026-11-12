@@ -1,0 +1,15 @@
+// Legacy reference only. Notehub now uses Cloudinary Free for photos.
+// This file is not deployed by firebase.json.
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /notes/{photo} {
+      // Board photos are public. Only the trusted server can upload/delete.
+      allow get: if photo.matches('^[0-9a-f-]+[.]jpg$');
+      allow list, write: if false;
+    }
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

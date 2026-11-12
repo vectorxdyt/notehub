@@ -1,0 +1,37 @@
+{
+  "name": "notehub",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "firebase:check": "node --env-file=.env.local scripts/check-firebase.mjs"
+  },
+  "dependencies": {
+    "firebase": "^13.2.0",
+    "firebase-admin": "^14.5.0",
+    "lucide-react": "^0.468.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.35.5",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/web-push": "^3.6.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "type": "module",
+  "overrides": {
+    "@grpc/grpc-js": "^1.13.6"
+  }
+}

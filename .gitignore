@@ -1,0 +1,13 @@
+node_modules
+.next
+.env*
+!.env.example
+*.tsbuildinfo
+.vercel
+
+# Firebase credentials and local tooling
+*service-account*.json
+*adminsdk*.json
+.firebase
+*-debug.log
+notehub.zip

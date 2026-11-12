@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+.env*
+*adminsdk*.json
+*service-account*.json
+.firebase
+*-debug.log
+notehub.zip
+*.tsbuildinfo
